@@ -14,5 +14,16 @@ class m_user extends CI_Model{
 		$query = $this->db->query($sql);
 		return $query;
 	}
+	
+	function get_all(){
+		$sql = "SELECT * FROM $this->table";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+	
+	function insert_user($value){
+		$query = $this->db->insert($this->table, $value);
+		return $query;
+	}
 }
 ?>

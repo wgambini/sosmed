@@ -1,25 +1,26 @@
 <html>
-<center>
+<head>
+<title>My Form</title>
+</head>
+<body>
+<?php if($form_action == "c_login"){?>
+<a href="c_signup">Sign Up</a> |
+<a href="c_login/forget_password">Forget Password</a>
+<?php }?>
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('c_login/do_login'); ?>
-		<table border="1">
-			<tr>
-				<td>Username</td>
-				<td><input type="text" name="user_name">
-				</td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="user_password">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="Login">
-				</td>
-			</tr>
-		</table>
-	</form>
-</center>
+<?php echo form_open($form_action); ?>
+
+<h5>Username</h5>
+<input type="text" name="user_name" value="" size="50" />
+
+<h5>Password</h5>
+<input type="password" name="user_password" value="" size="50" />
+
+<div><input type="submit" value="Submit" /></div>
+
+<?php echo form_close()?>
+
+</body>
 </html>
