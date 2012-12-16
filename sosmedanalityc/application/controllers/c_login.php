@@ -4,6 +4,7 @@ class c_login extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
+		$this->user_authentication->logged_in('c_home', 'member');
 	}
 
 	function index()
@@ -17,7 +18,7 @@ class c_login extends CI_Controller{
 		$data['form_action'] = "c_login";
 
 		if ($this->form_validation->run() == false){
-			$this->load->view('v_login');
+			$this->load->view('v_login', $data);
 		}else{
 			$this->do_login();
 		}
@@ -30,9 +31,9 @@ class c_login extends CI_Controller{
 		$user = $this->m_user->get_user($user_name,$user_password);
 		if($user->num_rows()>0){
 			$member = $user->row();
-			$member['user_type'] = "member";
-			$this->session->set_userdata($user->row());
-			redirect('home');
+			$data['member'] = $member->user_id;
+			$this->session->set_userdata($data);
+			redirect('c_home');
 		}else{
 			show_error("error2");
 		}
