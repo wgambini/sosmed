@@ -3,9 +3,10 @@
 <title>Admin - Member List</title>
 </head>
 <body>
-	<a href="home">List Member</a> | 
-	<a href="create_member">Create Member</a> | 
-	<a href="article">Article</a>
+	<a href="<?=base_url()."index.php/c_admin/home"?>">List Member</a> | 
+	<a href="<?=base_url()."index.php/c_admin/create_member"?>">Create Member</a> | 
+	<a href="<?=base_url()."index.php/c_admin/article"?>">Article</a> | 
+	<a href="<?=base_url()."index.php/c_admin/logout"?>">Logout</a>
 	<table width=50% border="1">
 		<tr>
 			<th>User ID</th>
@@ -32,7 +33,7 @@
 			<td><?=$row->user_name?></td>
 			<td><?=$payment?></td>
 			<td><?=$type?></td>
-			<td><a href="<?="c_admin/update_user/".$row->user_id?>">Update</a></td>
+			<td><a href="<?="c_signup/update/".$row->user_id?>">Update</a></td>
 			<td><a href="<?="c_admin/delete_user/".$row->user_id?>">Delete</a></td>
 		</tr>
 		<?php }?>
