@@ -57,10 +57,6 @@
 					<h1>Login</h1>
 					<form class="form-vertical" action="dashboard.html" />
 						<div class="control-group">
-							<?php if($form_action == "c_login"){?>
-							<a href="c_signup">Sign Up</a> |
-							<a href="c_login/forget_password">Forget Password</a>
-							<?php }?>
 							<?php echo validation_errors(); ?>
 							<?php echo form_open($form_action); ?>
 
@@ -95,7 +91,6 @@
 						<div class="control-group">
 							<label class="control-label">Nama Depan</label>
 							<div class="controls">
-								<input type="password" />
 								<input type="text" name="user_first_name" value="<?php echo set_value('user_first_name', $user_first_name); ?>" size="25" />
 							</div>
 						</div>
