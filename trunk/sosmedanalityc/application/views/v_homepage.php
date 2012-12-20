@@ -1,1 +1,1 @@
-<?php
+<a href="c_home/get_request">Add Twitter</a>

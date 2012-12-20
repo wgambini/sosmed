@@ -1,3 +1,4 @@
+<?php echo validation_errors(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -12,18 +13,18 @@
 <meta name="author" content="" />
 
 <!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="bootstrap/css/bootstrap-login.min.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>bootstrap/css/bootstrap-login.min.css" media="screen" />
 
 <!-- Uniform Stylesheet -->
-<link rel="stylesheet" href="plugins/uniform/css/uniform.default.css" />
+<link rel="stylesheet" href="<?=base_url()?>plugins/uniform/css/uniform.default.css" />
 
 <!-- Plugin Stylsheets first to ease overrides -->
 
 <!-- End Plugin Stylesheets -->
 
 <!-- Main Layout Stylesheet -->
-<link rel="stylesheet" href="assets/css/fonts/icomoon/style.css" media="screen" />
-<link rel="stylesheet" href="assets/css/login.min.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/css/fonts/icomoon/style.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/css/login.min.css" media="screen" />
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -55,34 +56,31 @@
 			<div id="login-circle">
 				<section id="login-form" class="login-inner-form active" data-angle="0">
 					<h1>Login</h1>
-					<form class="form-vertical" action="dashboard.html" />
+					<form class="form-vertical" action="c_login/do_login" method="post">
 						<div class="control-group">
-							<?php echo validation_errors(); ?>
-							<?php echo form_open($form_action); ?>
 
 							<h5>Username</h5>
-							<input type="text" name="user_name" placeholder="Username" id="input-username" class="big" />
+							<input type="text" name="user_name_login" placeholder="Username" id="input-username" class="big" />
 
 							<h5>Password</h5>
-							<input type="password" name="user_password" placeholder="Password" id="input-password" class="big" />
+							<input type="password" name="user_password_login" placeholder="Password" id="input-password" class="big" />
+						</div>
 							
 						<div class="control-group">
 							<label class="checkbox">
-								<input type="checkbox" class="uniform" /> Remember me
+								<input type="checkbox" class="uniform" name="remember"/> Remember me
 							</label>
 						</div>
 						<div class="form-actions">
 							<button type="submit" value="Submit" class="btn btn-success btn-block btn-large">Login</button>
-								<?php echo form_close()?>	
 						</div>
 					</form>
 
 				</section>
 				<section id="register-form" class="login-inner-form" data-angle="90">
 					<h1>Register</h1>
-					<form class="form-vertical" action="dashboard.html" />			
+					<form class="form-vertical" action="c_login/do_signup" method="post">			
 						<div class="control-group">
-						<?php echo form_open('c_signup'); ?>
 							<label class="control-label">Username</label>
 							<div class="controls">
 							<input type="text" name="user_name" value="<?php echo set_value('user_name', $user_name); ?>" size="15" />
@@ -127,21 +125,20 @@
 						<div class="control-group">
 							<label class="control-label">Payment Method</label>
 							<div class="controls">
-								<select>
-									<option />PayPal
-									<option />Credit Card
+								<select name="payment_method">
+									<option value="1">PayPal</option>
+									<option value="2">Credit Card</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-actions">
 							<button type="submit" value="Submit" class="btn btn-danger btn-block btn-large">Register</button>
-								<?php echo form_close();?>
 						</div>
 					</form>
 				</section>
 				<section id="forget-form" class="login-inner-form" data-angle="180">
 					<h1>Reset Password</h1>
-					<form class="form-vertical" action="dashboard.html" />
+					<form class="form-vertical" action="c_login/forget_password">
 						<div class="control-group">
 							<div class="controls">
 								<input type="text" class="big" placeholder="Enter Your Email..." />
@@ -159,14 +156,14 @@
     </div>
 
 	<!-- Core Scripts -->
-	<script src="assets/js/libs/jquery-1.8.2.min.js"></script>
-	<script src="assets/js/libs/jquery.placeholder.min.js"></script>
+	<script src="<?=base_url()?>assets/js/libs/jquery-1.8.2.min.js"></script>
+	<script src="<?=base_url()?>assets/js/libs/jquery.placeholder.min.js"></script>
     
     <!-- Login Script -->
-    <script src="assets/js/login.js"></script>
+    <script src="<?=base_url()?>assets/js/login.js"></script>
 
     <!-- Uniform Script -->
-    <script src="plugins/uniform/jquery.uniform.min.js"></script>
+    <script src="<?=base_url()?>plugins/uniform/jquery.uniform.min.js"></script>
 
 </body>
 
