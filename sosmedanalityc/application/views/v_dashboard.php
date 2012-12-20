@@ -87,6 +87,7 @@
         <nav id="menu">
           <ul id="nav" class="navigation">
             <li><a href="index.html" class="active">Home</a></li>
+            <?php if($package_type!=1){?>
             <li><a href="#1">Reports and Stats</a>
               <ul>
                 <li><a href="about.html">Reach</a></li>
@@ -101,6 +102,8 @@
 				<li><a href="full_width.html">Demography</a></li>			
               </ul>
             </li>
+            <?php }?>
+            <?php if($package_type==3){?>
             <li><a href="#2">Analytics Method</a>
               <ul>
                 <li><a href="shortcodes.html">Back Analysis</a></li>
@@ -111,6 +114,7 @@
                 </li>
               </ul>
             </li>
+            <?php }?>
             <li><a href="portfolio_4.html#4">Create Project Campaign</a>
               <ul>
                 <li><a href="portfolio_2.html">Create Project</a></li>
@@ -137,6 +141,7 @@
             </li>
             <li><a href="blog.html#5">Add Twitter Account</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="c_dashboard/do_signout">Logout</a></li>
           </ul>
         </nav>
       </div><!-- End Menu -->

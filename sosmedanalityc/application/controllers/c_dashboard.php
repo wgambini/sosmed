@@ -8,11 +8,16 @@ class c_dashboard extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('v_dashboard');
+		$this->load->view('v_dashboard',$this->session->all_userdata());
 	}
 	
 	function get_request(){
 		$this->library->request_token();
+	}
+	
+	function do_signout(){
+		$this->session->sess_destroy();
+		redirect('c_login');
 	}
 }
 ?>

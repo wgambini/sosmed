@@ -18,8 +18,6 @@ class c_login extends CI_Controller{
 		$this->value['user_last_name'] = '';
 		$this->value['user_address'] ='';
 		$this->value['user_email'] = '';
-		$this->value['user_status'] = 1;
-		$this->value['user_type'] = 1;
 	}
 
 	function index()
@@ -45,10 +43,11 @@ class c_login extends CI_Controller{
 			if($user->num_rows()>0){
 				$member = $user->row();
 				$data['member'] = $member->user_id;
+				$data['package_type'] = $member->package_type;
 				$this->session->set_userdata($data);
 				redirect('c_dashboard');
 			}else{
-				show_error("error2");
+				show_error("Username atau password salah");
 			}
 		}
 	}
@@ -70,15 +69,12 @@ class c_login extends CI_Controller{
 			$this->value['user_address'] = $this->input->post('user_address');
 			$this->value['user_email'] = $this->input->post('user_email');
 			$this->value['user_password'] = md5($this->input->post('user_password'));
-			$this->value['user_status'] = 1;
-			$this->value['user_type'] = 1;
+			$this->value['payment_method'] = 0;
+			$this->value['package_type'] = $this->input->post('package_type');
 			$this->load->model('m_user');
 			$res = $this->m_user->insert_user($this->value);
 			if($res) {
-				switch($this->session->userdata('user_type')){
-					case "admin": redirect('c_admin'); break;
-					case "member" : redirect('c_login'); break;
-				}
+				redirect('c_login');
 			}
 			else show_error('Registrasi Gagal');
 		}

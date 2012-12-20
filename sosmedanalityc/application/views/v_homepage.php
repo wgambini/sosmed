@@ -1,1 +1,1 @@
-<a href="c_home/get_request">Add Twitter</a>
+<a href="c_connect_twitter">Add Twitter</a>
