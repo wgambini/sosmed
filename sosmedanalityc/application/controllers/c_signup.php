@@ -10,13 +10,6 @@ class c_signup extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('user_name', 'Username', 'required|min_length[5]|max_length[12]|is_unique[user.user_name]');
-		$this->form_validation->set_rules('user_password', 'Password', 'required|matches[passconf]');
-		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
-		$this->form_validation->set_rules('user_email', 'Email', 'required|valid_email|is_unique[user.user_email]');
-		$this->form_validation->set_rules('user_first_name', 'Nama Depan', 'required');
-		$this->form_validation->set_rules('user_last_name', 'Nama Belakang', 'required');
-		$this->form_validation->set_rules('user_address', 'Alamat', 'required');
 		
 		$value['user_name'] = '';
 		$value['user_first_name'] = '';
