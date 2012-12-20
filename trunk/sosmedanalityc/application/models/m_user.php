@@ -6,7 +6,6 @@ class m_user extends CI_Model{
 	var $field_id = "user_id";
 	
 	function __construct(){
-		
 	}
 	
 	function get_user($id,$pass){
