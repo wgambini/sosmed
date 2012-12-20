@@ -123,6 +123,16 @@
 							</div>
 						</div>
 						<div class="control-group">
+							<label class="control-label">Package Type</label>
+							<div class="controls">
+								<select name="package_type">
+									<option value="1">Trial</option>
+									<option value="2">Package 1</option>
+									<option value="3">Package 2</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
 							<label class="control-label">Payment Method</label>
 							<div class="controls">
 								<select name="payment_method">

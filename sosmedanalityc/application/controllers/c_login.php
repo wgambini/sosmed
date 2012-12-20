@@ -6,7 +6,7 @@ class c_login extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->user_authentication->logged_in('c_home', 'member');
+		$this->user_authentication->logged_in('c_dashboard', 'member');
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 		$this->init();
@@ -46,7 +46,7 @@ class c_login extends CI_Controller{
 				$member = $user->row();
 				$data['member'] = $member->user_id;
 				$this->session->set_userdata($data);
-				redirect('c_home');
+				redirect('c_dashboard');
 			}else{
 				show_error("error2");
 			}
