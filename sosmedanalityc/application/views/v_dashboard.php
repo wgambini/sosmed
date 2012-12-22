@@ -141,11 +141,12 @@
             </li>
             <li><a href="blog.html#5">Add Twitter Account</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="c_dashboard/do_signout">Logout</a></li>
           </ul>
         </nav>
       </div><!-- End Menu -->
       
+	            <div class="four columns alpha"><a href="c_dashboard/do_signout" class="link">Logout</a></div>
+	  
       <div class="sixteen columns"><hr /></div>
       
     </div><!-- End Container -->
@@ -196,7 +197,7 @@
             <h2>Social media management for exceptional companies.</h2>
             <p>All of your social messages in one, easy-to-manage Inbox </p>
           </div>
-          <div class="four columns alpha"><a href="http://themeforest.net/item/crevision-responsive-html-template/3083469?ref=Jozoor" class="link">REGISTER NOW!!</a></div>
+
         </div>
       </div>
     </div><!-- End Welcome -->
