@@ -139,7 +139,7 @@
                 <li><a href="portfolio_4.html">b. Define Phrase Sentiment</a></li>
               </ul>
             </li>
-            <li><a href="blog.html#5">Add Twitter Account</a></li>
+            <li><a href="c_connect_twitter">Add Twitter Account</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
