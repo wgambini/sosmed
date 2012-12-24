@@ -1,7 +1,10 @@
 <?php
-class Library{
+require 'globals.php';
+require 'oauth_helper.php';
 
-	private $oauthrequester;
+class Twitter{
+
+	private $reqUrl = 'http://api.twitter.com/oauth/request_token';
 	private $consumer_key = 'SemtzQAERJSB0z5QoXbCtg';
 	private $consumer_secret = 'aeZuZzj0sbSNZr91oOQqmRun3aXfkaQy3EbgTnB3qHQ';
 
@@ -19,6 +22,8 @@ class Library{
 		$params['oauth_timestamp'] = time();
 		$params['oauth_consumer_key'] = $this->consumer_key;
 		$params['oauth_callback'] = $callback;
+		
+		$headers = array();
 	
 		// compute signature and add it to the params list
 		if ($useHmacSha1Sig) {
@@ -61,7 +66,6 @@ class Library{
 			$body_parsed = oauth_parse_str($body);
 			if (! empty($body_parsed)) {
 				logit("getreqtok:INFO:response_body_parsed:");
-				print_r($body_parsed);
 			}
 			$retarr = $response;
 			$retarr[] = $body_parsed;
