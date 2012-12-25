@@ -1,470 +1,706 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
 <head>
+<meta charset="utf-8" />
 
-  <!-- Basic Page Needs -->
-  <meta charset="utf-8">
-  <title>SOCMED | aaaaaaa</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
-  <!-- Mobile Specific Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Bootstrap Stylesheet -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen" />
 
-  <!-- CSS Style -->
-  <link rel="stylesheet" href="<?=base_url()?>css/style.css"> 
-  
-  <!-- Color Skins -->
-  <link rel="stylesheet" href="<?=base_url()?>css/skins/blue.css" title="blue"> 
-  <link rel="alternate stylesheet" href="<?=base_url()?>css/skins/orange.css" title="orange">
-  <link rel="alternate stylesheet" href="<?=base_url()?>css/skins/green.css" title="green">
-  <link rel="alternate stylesheet" href="<?=base_url()?>css/skins/red.css" title="red">
-  <link rel="alternate stylesheet" href="<?=base_url()?>css/skins/purple.css" title="purple"> 
-  
-  <!-- Small Icons -->
-  <link rel="stylesheet" href="<?=base_url()?>css/icons.css"> 
-  
-  <!-- Start JavaScript -->
-  
-    <script src="<?=base_url()?>js/jquery-1.7.2.min.js"></script> <!-- jQuery library --> 
-    <script src="<?=base_url()?>js/jquery.easing.1.3.min.js"></script> <!-- jQuery Easing --> 
-    <script src="<?=base_url()?>js/jquery-ui.min.js"></script> <!-- jQuery Ui --> 
-    <script src="<?=base_url()?>js/ddsmoothmenu.js"></script> <!-- Nav Menu ddsmoothmenu -->
-    <script src="<?=base_url()?>js/jquery.flexslider.js"></script> <!-- Flex Slider  -->
-    <script src="<?=base_url()?>js/jquery.eislideshow.js"></script> <!-- Elastic Slider  -->
-    <script src="<?=base_url()?>js/jquery.iconmenu.js"></script> <!-- Sliding Text and Icon Menu Style  -->
-    <script src="<?=base_url()?>js/colortip.js"></script> <!-- Colortip Tooltip Plugin  -->
-    <script src="<?=base_url()?>js/tytabs.js"></script> <!-- jQuery Plugin tytabs  -->
-    <script src="<?=base_url()?>js/carousel.js"></script> <!-- jQuery Carousel  -->
-    <script src="<?=base_url()?>js/jquery.prettyPhoto.js"></script> <!-- jQuery Prettyphoto  -->
-    <script src="<?=base_url()?>js/jquery.isotope.min.js"></script> <!-- Isotope Filtering  -->
-    <script src="<?=base_url()?>js/selectnav.js"></script> <!-- Responsive Navigation Menu by SelectNav -->
-    <script src="<?=base_url()?>js/jquery.ui.totop.js"></script> <!-- UItoTop plugin  -->
-    <script src="<?=base_url()?>js/custom.js"></script> <!-- Custom Js file for javascript in html -->
-    <script src="<?=base_url()?>js/jquery.tweet.js"></script> <!-- jQuery Tweets -->
-    <script src="<?=base_url()?>js/jflickrfeed.min.js"></script> <!-- jQuery Flickr -->
-    <script src="<?=base_url()?>js/twitter-flickr-options.js"></script> <!-- jQuery Tweets Options -->
-    <script src="<?=base_url()?>js/styleswitch.js"></script> <!-- Style Colors Switcher -->
-  
-  <!-- End JavaScript -->
+<!-- jquery-ui Stylesheets -->
+<link rel="stylesheet" href="assets/jui/css/jquery.ui.all.css" media="screen" />
+<link rel="stylesheet" href="assets/jui/jquery-ui.custom.css" media="screen" />
+<link rel="stylesheet" href="assets/jui/timepicker/jquery-ui-timepicker.css" media="screen" />
 
-  <!--[if lt IE 9]>
-      <script src="js/html5.js"></script>
-  <![endif]-->
+<!-- Uniform Stylesheet -->
+<link rel="stylesheet" href="plugins/uniform/css/uniform.default.css" />
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="<?=base_url()?>images/favicon/favicon.ico">
-  <link rel="apple-touch-icon" href="<?=base_url()?>images/favicon/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?=base_url()?>images/favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?=base_url()?>images/favicon/apple-touch-icon-114x114.png">
+<!-- Plugin Stylsheets first to ease overrides -->
 
-</head>
+<!-- iButton -->
+<link rel="stylesheet" href="plugins/ibutton/jquery.ibutton.css" media="screen" />
+
+<!-- Circular Stat -->
+<link rel="stylesheet" href="custom-plugins/circular-stat/circular-stat.css" />
+
+<!-- Fullcalendar -->
+<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.css" media="screen" />
+<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print" />
+
+<!-- End Plugin Stylesheets -->
+
+<!-- Main Layout Stylesheet -->
+<link rel="stylesheet" href="assets/css/fonts/icomoon/style.css" media="screen" />
+<link rel="stylesheet" href="assets/css/mooncake.min.css" media="screen" />
+<link rel="stylesheet" href="assets/css/plugins/plugins.min.css" media="screen" />
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<title>testing dashboard</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
 <body>
 
-  <div class="switcher-box">
-    <a rel="blue" class="styleswitch blue"></a>
-    <a rel="orange" class="styleswitch orange"></a>
-    <a rel="green" class="styleswitch green"></a>
-    <a rel="red" class="styleswitch red"></a>
-    <a rel="purple" class="styleswitch purple"></a>
-   </div><!-- End switcher-box -->
 
-  <header>
-    <div class="container clearfix">
-    
-      <div class="one-third column">
-        <div class="logo">
-        <a href="index.html">
-          <img src="<?=base_url()?>images/logo.png" alt="Crevision - Creative Template" />
-        </a>
-        </div>
-      </div><!-- End Logo -->
-      
-      <div class="two-thirds column">
-        <nav id="menu">
-          <ul id="nav" class="navigation">
-            <li><a href="index.html" class="active">Home</a></li>
-            <?php if($package_type!=1){?>
-            <li><a href="#1">Reports and Stats</a>
-              <ul>
-                <li><a href="about.html">Reach</a></li>
-                <li><a href="services.html">Engangement</a></li>
-                <li><a href="team.html">Market Share</a></li>
-                <li><a href="process.html">Unique Users</a></li>
-                <li><a href="sidebar_right.html">Total Mention</a></li>
-                <li><a href="sidebar_left.html">ReTweet</a></li>
-                <li><a href="FAQ.html">Time Based</a></li>
-                <li><a href="sitemap.html">Trend Follower</a></li>
-                <li><a href="full_width.html">By Location</a></li>
-				<li><a href="full_width.html">Demography</a></li>			
-              </ul>
-            </li>
-            <?php }?>
-            <?php if($package_type==3){?>
-            <li><a href="#2">Analytics Method</a>
-              <ul>
-                <li><a href="shortcodes.html">Back Analysis</a></li>
-                <li><a href="#3">Forward Analysis</a>
-                  <ul>
-    		        <li><a href="#3-1">Follower Trend</a></li>
-		          </ul>
-                </li>
-              </ul>
-            </li>
-            <?php }?>
-            <li><a href="portfolio_4.html#4">Create Project Campaign</a>
-              <ul>
-                <li><a href="portfolio_2.html">Create Project</a></li>
-                <li><a href="portfolio_3.html">Create Job</a>
-				 <ul>
-    		        <li><a href="#3-1">Job Type</a>
-						<ul>
-							<li><a href="#3-1">Market Share</a></li>
-							<li><a href="#3-1">Trend Follower</a></li>
-							<li><a href="#3-1">General/Custom/Free</a></li>
-							<li><a href="#3-1"><to be added></a></li>
-						</ul>
-					</li>
-		          </ul>
-				</li>
-				 <li><a href="portfolio_4.html">a. Insert Keywords</a>
-					<ul>
-						<li><a href="#3-1">Included words</a></li>
-						<li><a href="#3-1">Not Included words</a></li>
-					</ul>
-				 </li>
-                <li><a href="portfolio_4.html">b. Define Phrase Sentiment</a></li>
-              </ul>
-            </li>
-            <li><a href="c_connect_twitter">Add Twitter Account</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div><!-- End Menu -->
-      
-	            <div class="four columns alpha"><a href="c_dashboard/do_signout" class="link">Logout</a></div>
-	  
-      <div class="sixteen columns"><hr /></div>
-      
-    </div><!-- End Container -->
-  </header><!-- <<< End Header >>> -->
-  
-  <div id="slider">
-    <div class="container clearfix">
-      <div class="sixteen columns">
-      <div class="flex-container">
-	  <div class="flexslider">
-		<ul class="slides">
-          <li>
-			<a href="#"><img src="<?=base_url()?>images/img/sliders/slider-1-1.jpg" alt="You Can Add"></a>
-			<p class="flex-caption"> <span>Crevision Theme</span> as many slides as you want with and without captions. Win! </p>
-		  </li>
-		  <li>
-			<a href="#"><img src="<?=base_url()?>images/img/sliders/slider-1-2.jpg" alt="Crevision Theme"></a>
-            <p class="flex-caption"> <span>Crevision Theme</span> as many slides as you want with and without captions. Win! </p>
-		  </li>
-          <li>
-			<a href="#"><img src="<?=base_url()?>images/img/sliders/slider-1-3.jpg" alt="You Can Add"></a>
-			<p class="flex-caption"> <span>Crevision Theme</span> as many slides as you want with and without captions. Win! </p>
-		  </li>
-          <li>
-			<a href="#"><img src="<?=base_url()?>images/img/sliders/slider-1-4.jpg" alt="You Can Add"></a>
-			<p class="flex-caption"> <span>Crevision Theme</span> as many slides as you want with and without captions. Win! </p>
-		  </li>
-          <li>
-			<a href="#"><img src="<?=base_url()?>images/img/sliders/slider-1-5.jpg" alt="You Can Add"></a>
-			<p class="flex-caption"> <span>Crevision Theme</span> as many slides as you want with and without captions. Win! </p>
-		  </li>
-        </ul>
-	  </div>
-      
-      </div>
-      
-      </div>
-      
-    </div><!-- End Container -->
-  </div><!-- End Slider -->
-  
-  <div class="container clearfix">
-  
-    <div id="welcome">
-      <div class="sixteen columns">
-        <div class="qoute">
-          <div class="eleven columns omega">
-            <h2>Social media management for exceptional companies.</h2>
-            <p>All of your social messages in one, easy-to-manage Inbox </p>
-          </div>
 
-        </div>
-      </div>
-    </div><!-- End Welcome -->
-    
-    <div class="recent-work gallery clearfix">
-    
-      <div class="slidewrap" >
-    
-      <div class="sixteen columns"> <h2 class="title">FEATURES<span class="line"></span></h2> </div>
-      
-      <ul class="slidecontrols">
-      <li><a href="#sliderName" class="next">Next</a></li><li><a href="#sliderName" class="prev">Prev</a></li>
-	  </ul>	
-      
-      <ul class="slider" id="sliderName">
-      
-      <li class="slide">	
-      
-      <!-- item 1 -->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="single_project_1.html"><img src="<?=base_url()?>images/img/thumbs/thumb-1.jpg" alt="" class="pic" />
-          <span class="hover-effect link"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      <!-- item 2 -->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="images/img/thumbs/thumb-2.jpg" rel="prettyPhoto[gallery1]">
-          <img src="<?=base_url()?>images/img/thumbs/thumb-2.jpg" alt="" class="pic" />
-          <span class="hover-effect zoom"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      <!-- item 3 -->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="single_project_1.html"><img src="<?=base_url()?>images/img/thumbs/thumb-3.jpg" alt="" class="pic" />
-          <span class="hover-effect link"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      </li><!-- End slide -->
-      
-      <li class="slide">	
-      
-      <!-- item 4 -->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="single_project_1.html"><img src="<?=base_url()?>images/img/thumbs/thumb-1.jpg" alt="" class="pic" />
-          <span class="hover-effect link"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      <!-- item 5 -->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="images/img/thumbs/thumb-2.jpg" rel="prettyPhoto[gallery2]">
-          <img src="<?=base_url()?>images/img/thumbs/thumb-2.jpg" alt="" class="pic" />
-          <span class="hover-effect zoom"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      <!-- item 6-->
-      <div class="one-third column item">
-          <div class="caption">
-          <a href="single_project_1.html"><img src="<?=base_url()?>images/img/thumbs/thumb-3.jpg" alt="" class="pic" />
-          <span class="hover-effect link"></span></a>
-          </div><!-- hover effect -->
-          <h4><a href="single_project_1.html">MonsterUp</a></h4>
-          <p>design ,graphic ,illustration</p>
-      </div>
-      <!-- End -->
-      
-      </li><!-- End slide -->
-      
-      </ul>
-      
-      </div><!-- End slidewrap -->
-    
-    </div><!-- End recent-work -->
-    
-    <div class="one-third column">
-    
-      <h2 class="title">Our Services<span class="line"></span></h2>
-      
-      <div id="accordion">
-        <h3><a href="#">Web Design</a></h3>
-        <div><p>Ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia. Nam quis cursus massa. Dapibus, turpis quis.</p></div>
+	<div id="wrapper">
+        <header id="header" class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+					<div class="brand-wrap pull-left">
+						<div class="brand-img">
+							<a class="brand" href="#">
+								<img src="assets/images/logo.png" alt="" />
+							</a>
+						</div>
+					</div>
+                    
+                    <div id="header-right" class="clearfix">
+						<div id="nav-toggle" data-toggle="collapse" data-target="#navigation" class="collapsed">
+							<i class="icon-caret-down"></i>
+						</div>
+						<div id="header-search">
+							<span id="search-toggle" data-toggle="dropdown">
+								<i class="icon-search"></i>
+							</span>
+							<form class="navbar-search" />
+								<input type="text" class="search-query" placeholder="Search" />
+							</form>
+						</div>
+						<div id="dropdown-lists">
+							<a class="item" href="#">
+								<span class="item-icon"><i class="icon-exclamation-sign"></i></span>
+								<span class="item-label">Notifications</span>
+								<span class="item-count">4</span>
+							</a>
+							<a class="item" href="mail.html">
+								<span class="item-icon"><i class="icon-envelope"></i></span>
+								<span class="item-label">Messages</span>
+								<span class="item-count">16</span>
+							</a>
+						</div>
+                        
+                        <div id="header-functions" class="pull-right">
+                        	<div id="user-info" class="clearfix">
+                                <span class="info">
+                                	Welcome
+                                    <span class="name">Shana-chan</span>
+                                </span>
+                            	<div class="avatar">
+                                	<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                    	<img src="assets/images/pp.jpg" alt="Avatar" />
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                    	<li><a href="profile.html"><i class="icol-user"></i> My Profile</a></li>
+                                    	<li><a href="#"><i class="icol-layout"></i> My Invoices</a></li>                                        
+                                        <li class="divider"></li>
+                                        <li><a href="index.html"><i class="icol-key"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="logout-ribbon">
+                            	<a href="c_dashboard/do_signout"><i class="icon-off"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         
-        <h3><a href="#">Branding</a></h3>
-        <div><p>Ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia. Nam quis cursus massa. Dapibus, turpis quis.</p></div>
+        <div id="content-wrap">
+        	<div id="content">
+            	<div id="content-outer">
+                	<div id="content-inner">
+                    	<aside id="sidebar">
+                        	<nav id="navigation" class="collapse">
+                            	<ul>
+                                	<li class="active">
+                                    	<span title="General">
+                                    		<i class="icon-home"></i>
+											<span class="nav-title">General</span>
+                                        </span>
+                                    	<ul class="inner-nav">
+                                        	<li class="active"><a href="dashboard.html"><i class="icol-dashboard"></i> Dashboard</a></li>
+                                        	<li><a href="calendar.html"><i class="icol-calendar-2"></i> Calendar</a></li>
+                                            <li><a href="icons.html"><i class="icol-lifebuoy"></i> Icons</a></li>
+                                        	<li><a href="grids.html"><i class="icol-grid"></i> Grids</a></li>
+                                        	<li><a href="typography.html"><i class="icol-font"></i> Typography</a></li>
+                                        </ul>
+                                    </li>
+                                	<li>
+                                    	<span title="Table">
+                                    		<i class="icon-table"></i>
+											<span class="nav-title">Table</span>
+                                        </span>
+                                    	<ul class="inner-nav">
+                                        	<li><a href="tables.html"><i class="icol-style"></i> Static Tables</a></li>
+                                        	<li><a href="responsive_tables.html"><i class="icol-hammer-screwdriver"></i> Responsive Tables</a></li>
+                                        	<li><a href="data_tables.html"><i class="icol-table"></i> Data Tables</a></li>
+                                            <li><a href="detail_view.html"><i class="icol-eye"></i> Detail View Table</a></li>
+                                        </ul>
+                                    </li>
+                                	<li>
+                                    	<span title="Statistic">
+                                        	<i class="icon-graph"></i>
+											<span class="nav-title">Statistic</span>
+                                        </span>
+                                    	<ul class="inner-nav">
+                                        	<li><a href="statistic.html"><i class="icol-chart-curve"></i> Statistical Elements</a></li>
+                                        	<li><a href="charts_gallery.html"><i class="icol-chart-pie"></i> Charts Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                	<li>
+                                    	<span title="Form">
+                                        	<i class="icon-list"></i>
+											<span class="nav-title">Form</span>
+                                        </span>
+                                    	<ul class="inner-nav">
+                                        	<li><a href="form_layouts.html"><i class="icol-layout-select"></i> Form Layouts</a></li>
+                                        	<li><a href="form_elements.html"><i class="icol-ui-text-field-password"></i> Form Elements</a></li>
+											<li><a href="form_wizard.html"><i class="icol-wand"></i> Form Wizard</a></li>
+                                        	<li><a href="form_validation.html"><i class="icol-accept"></i> Form Validation</a></li>
+                                            <li><a href="wysiwyg.html"><i class="icol-pencil"></i> WYSIWYG</a></li>
+                                        </ul>
+                                    </li>
+                                	<li>
+                                    	<span title="Elements">
+                                        	<i class="icon-cogs"></i>
+											<span class="nav-title">Elements</span>
+                                        </span>
+                                    	<ul class="inner-nav">
+                                        	<li><a href="ui_bootstrap.html"><i class="icol-ui-tab-content"></i> Bootstrap Elements</a></li>
+											<li><a href="ui_components.html"><i class="icol-pipette"></i> Other Elements</a></li>
+                                        	<li><a href="alerts.html"><i class="icol-error"></i> Alerts and Notifications</a></li>
+											<li><a href="boxes.html"><i class="icol-cog"></i> Widget Boxes</a></li>
+                                        	<li><a href="buttons.html"><i class="icol-joystick"></i> Buttons</a></li>
+                                        	<li><a href="file_uploader.html"><i class="icol-computer"></i> File Uploader</a></li>
+											<li><a href="file_manager.html"><i class="icol-databases"></i> File Manager</a>
+                                        </li></ul>
+                                    
+                                	<li>
+                                    	<span title="Extra">
+                                        	<i class="icon-gift"></i>
+											<span class="nav-title">Extra</span>
+                                        </span>
+                                        <ul class="inner-nav">
+                                            <li><a href="profile.html"><i class="icol-user"></i> Profile Page</a></li>
+                                            <li><a href="mail.html"><i class="icol-email"></i> Mail Page</a></li>
+                                            <li><a href="widgets.html"><i class="icol-ruby"></i> Custom Widgets</a></li>
+                                            <li><a href="gallery.html"><i class="icol-images"></i> Image Gallery</a>
+                                            </li><li><a href="contacts.html"><i class="icol-vcard"></i> Contact List</a></li>
+                                            <li><a href="404.html"><i class="icol-error"></i> Error Page (404)</a></li>
+                                        </ul>
+                                    
+
+                                    <!-- Documentation -->
+                                    <li>
+                                        <a href="documentation/index.html" title="Documentation">
+                                            <i class="icon-book"></i>
+                                            <span class="nav-title">Docs</span>
+                                        </a>
+                                    </li>
+                                    <!-- End -->
+                                </li></li></ul>
+                            </nav>
+                        </aside>
+
+                        <div id="sidebar-separator"></div>
+                        
+                        <section id="main" class="clearfix">
+                        	<div id="main-header" class="page-header">
+                            	<ul class="breadcrumb">
+                                	<li>
+                                    	<i class="icon-home"></i>MoonCake
+                                        <span class="divider">&raquo;</span>
+                                    </li>
+                                    <li>
+                                    	<a href="#">Dashboard</a>
+                                    </li>
+                                </ul>
+                                
+                                <h1 id="main-heading">
+                                	Dashboard <span>This is the place where everything started</span>
+                                </h1>
+                            </div>
+                            
+                            <div id="main-content">
+                            	<ul class="stats-container">
+                                    <li>
+                                        <a href="#" class="stat summary">
+                                            <span class="sparkline" sparktype="bar" sparkbarcolor="#e95d3c" sparkbarwidth="6" sparkheight="28">28,33,32,34,32,33,36,28,24</span>
+                                            <span class="digit">
+                                                <span class="text">Support Requests</span>
+                                                378
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="stat summary">
+                                            <span class="sparkline" sparktype="bar" sparkbarcolor="#08c" sparkbarwidth="6" sparkheight="28">5,6,7,9,9,5,3,2,2,4,6,7</span>
+                                            <span class="digit">
+                                                <span class="text">Total Revenue</span>
+                                                $5378
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="stat summary">
+                                            <span class="icon icon-circle bg-green">
+                                                <i class="icon-stats"></i>
+                                            </span>
+                                            <span class="digit">
+                                                <span class="text">Current Balance</span>
+                                                $6,788
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="stat summary">
+                                            <span class="icon icon-circle bg-orange">
+                                                <i class="icon-user"></i>
+                                            </span>
+                                            <span class="digit">
+                                                <span class="text">New Customers</span>
+                                                341
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                            	<div id="dashboard-demo" class="tabbable analytics-tab paper-stack">
+                                	<ul class="nav nav-tabs">
+                                        <li class="active"><a href="#" data-target="#live" data-toggle="tab"><i class="icon-history"></i> Live Stats</a></li>
+                                    	<li><a href="#" data-target="#math" data-toggle="tab"><i class="icon-graph"></i> Some Math</a></li>
+                                    	<li><a href="#" data-target="#fb" data-toggle="tab"><i class="icon-facebook"></i> Facebook Insights</a></li>
+										<li><a href="#" data-target="#revenue" data-toggle="tab"><i class="icon-bars"></i> Revenue</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="live" class="tab-pane active">
+                                            <div class="analytics-tab-header clearfix">
+                                                <div class="form-inline">
+                                                    <label class="checkbox text-nowrap">
+                                                        <input id="live-switch" type="checkbox" />
+                                                        Switch to see the widgets below updating every second. 
+                                                        <span class="label label-info">Turned off by default to save CPU resource on old machines</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="analytics-tab-content">
+                                                <div class="row-fluid">
+                                                    <div class="span9">
+                                                        <div id="demo-chart-00" style="height: 265px;"></div>
+                                                    </div>
+                                                    <div class="span3">
+                                                        <div class="stat progress-stat">
+                                                            <span class="text"><i class="icon-feather"></i> Designs Completed <span>130/200</span></span>
+                                                            <div class="progress progress-mini progress-info progress-striped ">
+                                                                <div class="bar" style="width: 65%;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat progress-stat">
+                                                            <span class="text"><i class="icos-cat"></i> Cats Tammed <span>77%</span></span>
+                                                            <div class="progress progress-mini progress-info progress-striped ">
+                                                                <div class="bar" style="width: 77%;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat progress-stat">
+                                                            <span class="text"><i class="icon-download"></i> Download Progress <span>136/400 Mb</span></span>
+                                                            <div class="progress progress-mini progress-success progress-striped ">
+                                                                <div class="bar" style="width: 34%;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat progress-stat">
+                                                            <span class="text"><i class="icon-wrench"></i> Defects Repaired <span>54%</span></span>
+                                                            <div class="progress progress-mini progress-warning progress-striped ">
+                                                                <div class="bar" style="width: 54%;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="button" class="btn btn-block btn-primary">Generate Report</button>
+                                                        <button type="button" class="btn btn-block btn-danger">Report Bugs</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="analytics-tab-content">
+                                                <div class="row-fluid">
+                                                    <span class="span4">
+                                                        <span class="stat circular inline">
+                                                            <span id="cs-1" data-provide="circular" data-fill-color="#0088cc" data-value="35" data-radius="36" data-percent="true" data-thickness="8"></span>
+                                                            <span class="text">Server Load</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="span4">
+                                                        <span class="stat circular inline">
+                                                            <span id="cs-2" data-provide="circular" data-fill-color="#ed7a53" data-value="79.213" data-decimals="1" data-radius="36" data-percent="true" data-thickness="8"></span>
+                                                            <span class="text">Disk Space Usage</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="span4">
+                                                        <span class="stat block circular inline">
+                                                            <span id="cs-3" data-provide="circular" data-fill-color="#a5d166" data-value="94.899" data-decimals="2" data-radius="36" data-percent="true" data-thickness="8"></span>
+                                                            <span class="text">Bandwidth Usage</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    	<div id="math" class="tab-pane">
+                                        	<div class="analytics-tab-header clearfix">
+                                            	<div class="pull-left" style="width: 100%">
+													<div class="control-group">
+														<label class="control-label">Range of (x)</label>
+														<div class="controls">
+															<div id="math-x-range"></div>
+														</div>
+													</div>
+                                                </div>
+                                            </div>
+                                            <div class="analytics-tab-content">
+                                            	<div id="demo-chart-01" style="height: 353px;">
+                                                	
+                                                </div>
+                                            </div>
+                                        </div>
+                                    	<div id="fb" class="tab-pane">
+                                        	<div class="analytics-tab-header clearfix">
+                                            	<div class="pull-left form-inline">
+                                                	<label>Date Range</label>
+                                                    <input id="dp1" type="text" class="span2 datepicker uneditable-input" /> - 
+                                                    <input id="dp2" type="text" class="span2 datepicker uneditable-input" />
+                                                </div>
+                                            	<div class="btn-toolbar pull-right">
+                                                	<a class="btn btn-primary"><i class="icon-download-to-computer"></i> Export Data</a>
+                                                	<div class="btn-group">
+                                                    	<a class="btn dropdown-toggle" data-toggle="dropdown">
+                                                        	<i class="icon-cog-2"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        	<li><a href="#"><i class="icol-tag"></i> About Insights</a></li>
+                                                            <li><a href="#"><i class="icol-help"></i> Help</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="analytics-tab-content">
+                                            	<div id="demo-chart-02" style="height: 381px;">
+                                                	
+                                                </div>
+                                            </div>
+                                        </div>
+                                    	<div id="revenue" class="tab-pane">
+                                        	<div class="analytics-tab-header clearfix">
+                                            	<div id="demo-chart-03-toolbar" class="pull-left form-inline">
+                                                	<label class="checkbox"><input class="uniform" type="checkbox" name="dm1-0" checked="" /> Target Revenue</label>
+                                                	<label class="checkbox"><input class="uniform" type="checkbox" name="dm1-1" checked="" /> Actual Revenue</label>
+                                                </div>
+                                            	<div class="btn-toolbar pull-right">
+                                                	<a class="btn btn-primary"><i class="icon-download-to-computer"></i> Export Data</a>
+                                                	<div class="btn-group">
+                                                    	<a class="btn dropdown-toggle" data-toggle="dropdown">
+                                                        	<i class="icon-cog-2"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        	<li><a href="#"><i class="icol-tag"></i> About Insights</a></li>
+                                                            <li><a href="#"><i class="icol-help"></i> Help</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="analytics-tab-content">
+												<div id="demo-chart-03" style="height: 381px; "></div>
+											</div>
+										</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row-fluid">
+                                    <div class="span6 widget">
+                                        <div class="widget-header">
+                                            <span class="title"><i class="icos-heart-favorite"></i> Your Current Stats</span>
+                                        </div>
+                                        <div class="widget-content summary-list">
+                                            <ul>
+                                                <li>
+                                                    <span class="key"><i class="icon-support"></i> Support Tickets</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">332</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="key"><i class="icos-piggy-bank"></i> Commision</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">71% <i class="up icon-arrow-up"></i></span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="key"><i class="icos-shopping-cart-2"></i> This Week Sales</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">144 <i class="down icon-arrow-down"></i></span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="key"><i class="icos-money"></i> Cash Deposit</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">$6,421</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="key"><i class="icon-key"></i> Last Sign In</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">September 21, 2012</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="key"><i class="icon-windows"></i> Operating System</span>
+                                                    <span class="val">
+                                                        <span class="text-nowrap">Debian Linux</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                	<div class="span6 widget">
+                                        <div class="widget-header">
+                                            <span class="title">
+                                                <i class="icon-ok"></i> Pending Task List
+                                            </span>
+                                            <div class="toolbar">
+                                                <span class="btn" rel="tooltip" title="Add New Task"><i class="icon-plus"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="widget-content task-list">
+                                            <ul>
+                                                <li class="done">
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" checked="" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-food"></i> Feed the cats
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                                <li>
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-chemical"></i> Go to the doctor
+                                                            <span class="badge badge-warning">urgent</span>
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                                <li class="done">
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" checked="" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-bag"></i> Buy my wife a new dress
+                                                            <span class="badge badge-success">important</span>
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                                <li>
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-comments"></i> Introduce my daughter to my boss
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                                <li>
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-plane"></i> Buy a new airplane
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                                <li>
+                                                    <span class="checkbox"><input type="checkbox" class="uniform" /></span>
+                                                    <span class="text">
+                                                        <span class="text-nowrap">
+                                                            <i class="icon-users"></i> Attend a community meetup
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="close">&times;</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="widget">
+                                            <div class="widget-header">
+                                                <span class="title">
+                                                    <i class="icon-calendar"></i> My Schedule
+                                                </span>
+                                            </div>
+                                            <div class="widget-content no-padding no-border">
+                                                <div id="demo-calendar-01"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                     <div class="widget span12">
+                                        <div class="widget-header">
+                                            <span class="title">
+                                                <i class="icon-comments"></i> General Discussion
+                                            </span>
+                                            <div class="toolbar">
+                                                <span class="btn dropdown-toggle" data-toggle="dropdown">
+                                                    <span class="caret"></span>
+                                                </span>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li><a href="#"><i class="icol-lightbulb"></i> Available</a></li>
+                                                    <li><a href="#"><i class="icol-cross-shield-2"></i> Busy</a></li>
+                                                    <li><a href="#"><i class="icol-clock"></i> Away</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><i class="icol-disconnect"></i> Disconnect</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="widget-content chat-box">
+                                            <ul class="thumbnails">
+                                                <li class="me">
+                                                    <div class="thumbnail">
+                                                        <img src="assets/images/pp.jpg" />
+                                                    </div>
+                                                    <div class="message">
+                                                        <span class="name">Shana-chan</span>
+                                                        Hello everyone! Mind sharing your time with me today?
+                                                        <span class="time">15 minutes ago</span>
+                                                    </div>
+                                                </li>
+                                                <li class="others">
+                                                    <div class="thumbnail">
+                                                        <img src="sample/p2.jpg" />
+                                                    </div>
+                                                    <div class="message">
+                                                        <span class="name">Jane Well</span>
+                                                        Hello dear, do you have something in your mind to discuss with us?
+                                                        <span class="time">14 minutes ago</span>
+                                                    </div>
+                                                </li>
+                                                <li class="me">
+                                                    <div class="thumbnail">
+                                                        <img src="assets/images/pp.jpg" />
+                                                    </div>
+                                                    <div class="message">
+                                                        <span class="name">Shana-chan</span>
+                                                        Cras convallis, odio in ultricies condimentum, dui metus pretium orci, ac sagittis orci eros a leo. Cras lorem est, suscipit quis lacinia sit amet, tempor a tortor. Fusce in vehicula purus. Quisque ut suscipit elit. Fusce ac metus in enim euismod tincidunt. Nunc blandit neque vitae sem egestas id egestas neque bibendum. Etiam eget risus ut dolor convallis consectetur.
+                                                        <span class="time">10 minutes ago</span>
+                                                    </div>
+                                                </li>
+                                                <li class="others">
+                                                    <div class="thumbnail">
+                                                        <img src="sample/p1.jpg" />
+                                                    </div>
+                                                    <div class="message">
+                                                        <span class="name">Jonathan Doe</span>
+                                                        Wow, that's a long sentence. I don't quite understand what you mean, but it's good overall :)
+                                                        <span class="time">Just now</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="message-form">
+                                                <div class="row-fluid">
+                                                    <div class="span10">
+                                                        <input type="text" class="span12" placeholder="Type a message..." />
+                                                    </div>
+                                                    <div class="span2">
+                                                        <button type="button" class="btn btn-block btn-primary">Send</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <h3><a href="#">wordpress</a></h3>
-        <div><p>Ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia. Nam quis cursus massa. Dapibus, turpis quis.</p></div>
-                
-      </div><!-- End accordion -->
-    
-    </div><!-- End our services -->
-    
-    <div class="one-third column">
-    
-      <h2 class="title">Why Choose Us ?<span class="line"></span></h2>
-      
-      <ul class="whyus">
-        <li>
-          <a href="about.html"><img src="<?=base_url()?>images/img/whyus.jpg" alt="" class="border" /></a>
-          <p>Ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia. Nam quis cursus </p>
-          <span class="more2"><a href="about.html">more about us</a></span>
-        </li>
-      </ul>
-    
-    </div><!-- End choose us -->
-    
-    <div class="one-third column">
-    
-      
-      
-      <div class="slidewrap2">
-      
-       <h2 class="title">Recent Blog<span class="line"></span></h2>
-       
-       <div class="recent-blog">
-        <div  class="recent-blog2">
+        <footer id="footer">
+            <div class="footer-left">MoonCake - Responsive Admin Template</div>
+            <div class="footer-right"><p>Copyright 2012. All Rights Reserved.</p></div>
+        </footer>
         
-       <ul class="slider" id="sliderName2">
-      
-       <li class="slide">	
-      
-        <div class=" blog-item vertical">
-          <div class="date3"><span class="day">25</span><span class="month">AUG</span></div>
-          <h3><a href="single_post.html">Start jozoor website</a></h3>
-          <p>Start jozoor website by jozor we love design and more u can talk we about. </p>
-          <span class="more"><a href="single_post.html">Read more</a></span>
-        </div>
-        <div class=" blog-item vertical">
-          <div class="date3"><span class="day">25</span><span class="month">AUG</span></div>
-          <h3><a href="single_post.html">Start jozoor website</a></h3>
-          <p>Start jozoor website by jozor we love design and more u can talk we about. </p>
-          <span class="more"><a href="single_post.html">Read more</a></span>
-        </div>
-        
-         </li><!-- End slide --> 
-         
-         <li class="slide">	
-      
-        <div class=" blog-item vertical">
-          <div class="date3"><span class="day">25</span><span class="month">AUG</span></div>
-          <h3><a href="single_post.html">Start jozoor website</a></h3>
-          <p>Start jozoor website by jozor we love design and more u can talk we about. </p>
-          <span class="more"><a href="single_post.html">Read more</a></span>
-        </div>
-        <div class=" blog-item vertical">
-          <div class="date3"><span class="day">25</span><span class="month">AUG</span></div>
-          <h3><a href="single_post.html">Start jozoor website</a></h3>
-          <p>Start jozoor website by jozor we love design and more u can talk we about. </p>
-          <span class="more"><a href="single_post.html">Read more</a></span>
-        </div>
-        
-         </li><!-- End slide --> 
-          
-        </ul>
-        
-      </div>
-      </div>
-      
-      </div><!-- End slidewrap -->
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="assets/js/libs/jquery-1.8.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/libs/jquery.placeholder.min.js"></script>
+    <script src="assets/js/libs/jquery.mousewheel.min.js"></script>
     
-    </div><!-- End recent blog -->
+    <!-- Template Script -->
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/setup.js"></script>
+
+    <!-- Customizer, remove if not needed -->
+    <script src="assets/js/customizer.js"></script>
+
+    <!-- Uniform Script -->
+    <script src="plugins/uniform/jquery.uniform.min.js"></script>
     
+    <!-- jquery-ui Scripts -->
+    <script src="assets/jui/js/jquery-ui-1.8.24.min.js"></script>
+    <script src="assets/jui/jquery-ui.custom.min.js"></script>
+    <script src="assets/jui/timepicker/jquery-ui-timepicker.min.js"></script>
+    <script src="assets/jui/jquery.ui.touch-punch.min.js"></script>
     
+    <!-- Plugin Scripts -->
     
-    <div class="clients clearfix">
+    <!-- Flot -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="plugins/flot/jquery.flot.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.tooltip.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.pie.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.resize.min.js"></script>
+
+    <!-- Circular Stat -->
+    <script src="custom-plugins/circular-stat/circular-stat.min.js"></script>
+
+    <!-- SparkLine -->
+    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
     
-      <div class="sixteen columns"> 
-      
-      <h2 class="title">Our Clients <span class="line"></span></h2> 
-      <ul class="items">
-        <li><a href="#"><img src="<?=base_url()?>images/img/clients/client-1.jpg" alt="" /></a></li>
-        <li><a href="#"><img src="<?=base_url()?>images/img/clients/client-2.jpg" alt="" /></a></li>
-        <li><a href="#"><img src="<?=base_url()?>images/img/clients/client-3.jpg" alt="" /></a></li>
-        <li><a href="#"><img src="<?=base_url()?>images/img/clients/client-4.jpg" alt="" /></a></li>
-        <li><a href="#"><img src="<?=base_url()?>images/img/clients/client-5.jpg" alt="" /></a></li>
-      </ul><!-- End items -->
-      
-      </div>
-      
-      
-    </div><!-- End clients -->
+    <!-- iButton -->
+    <script src="plugins/ibutton/jquery.ibutton.js"></script>
+
+    <!-- Full Calendar -->
+    <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
     
-     
-  </div><!-- <<< End Container >>> -->
-  
-  <footer>
-    <div class="container">
+    <!-- DataTables -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/TableTools/js/TableTools.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.js"></script>
     
-      <div class="four columns">
-        <div class="about">
-          <h3 class="title">About Us<span class="line"></span></h3>
-          <p>
-          Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing 
-          lipsum aenean orci lorem Asequat. <br /> lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor .
-          </p>
-        </div>
-      </div><!-- End about -->
-      
-      <div class="four columns">
-        <div class="tweets">
-          <h3 class="title">Latest tweets<span class="line"></span></h3>
-            <div class='tweet query footer'></div><!-- Tweets Code -->
-        </div>
-      </div><!-- End tweets -->
-      
-      <div class="four columns">
-        <div class="flickr">
-          <h3 class="title">Flickr<span class="line"></span></h3>
-          <ul id="footer" class="thumbs"></ul> <!-- Flickr Code -->
-        </div>
-      </div><!-- End flickr -->
-      
-      <div class="four columns">
-        <div class="subscribe">
-          <h3 class="title">Subcribe<span class="line"></span></h3>
-          <p>Subscribe to our e-mail newsletter to receive updates.</p>
-          <form action="#">
-            <input type="text" class="mail" value="Enter your Email" onBlur="if(this.value == '') { this.value = 'Enter your Email'; }" 
-            onfocus="if(this.value == 'Enter your Email') { this.value = ''; }"/>
-            <input type="submit" value="Submit" class="submit" />
-          </form>
-        </div>
-      </div><!-- End subscribe -->
-      
-      <div class="sixteen columns"><hr class="bottom" /></div>
-      
-      <div class="eight columns"><span class="copyright">
-      © Copyright 2012 <a href="index.html">Crevision</a>. All Rights Reserved. by 
-      <a href="http://jozoor.com/" target="_blank" data="Jozoor%20Team.html">jozoor</a></span></div>
-      
-      <div class="eight columns">
-        <div class="social">
-          <a href="#"><img src="<?=base_url()?>images/icons/twitter.png" alt="" /></a>
-          <a href="#"><img src="<?=base_url()?>images/icons/facebook.png" alt="" /></a>
-          <a href="#"><img src="<?=base_url()?>images/icons/skype.png" alt="" /></a>
-          <a href="#"><img src="<?=base_url()?>images/icons/digg.png" alt="" /></a>
-          <a href="#"><img src="<?=base_url()?>images/icons/linkedin.png" alt="" /></a>
-          <a href="#"><img src="<?=base_url()?>images/icons/vimeo.png" alt="" /></a>
-        </div>
-      </div>
-    
-    </div><!-- End container -->
-  </footer><!-- <<< End Footer >>> -->
-    
+    <!-- Demo Scripts -->
+    <script src="assets/js/demo/dashboard.js"></script>
+
 </body>
+
 </html>
