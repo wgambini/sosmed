@@ -1,5 +1,11 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
+RewriteCond $1 !^(index\.php|assets)
+RewriteCond $1 !^(index\.php|bootstrap)
+RewriteCond $1 !^(index\.php|css)
+RewriteCond $1 !^(index\.php|custom-plugins)
+RewriteCond $1 !^(index\.php|documentation)
+RewriteCond $1 !^(index\.php|images)
+RewriteCond $1 !^(index\.php|js)
+RewriteCond $1 !^(index\.php|plugins)
+RewriteCond $1 !^(index\.php|sample)
 RewriteRule ^(.*)$ /sosmedanalityc/index.php/$1 [L]
