@@ -79,7 +79,7 @@
 				</section>
 				<section id="register-form" class="login-inner-form" data-angle="90">
 					<h1>Register</h1>
-					<form class="form-vertical" action="c_login/do_signup" method="post">			
+					<form class="form-vertical" action="c_login/do_signup" method="post" name="register">			
 						<div class="control-group">
 							<label class="control-label">Username</label>
 							<div class="controls">
@@ -125,7 +125,7 @@
 						<div class="control-group">
 							<label class="control-label">Package Type</label>
 							<div class="controls">
-								<select name="package_type">
+								<select name="package_type" onchange="change()">
 									<option value="1">Trial</option>
 									<option value="2">Package 1</option>
 									<option value="3">Package 2</option>
@@ -174,6 +174,17 @@
 
     <!-- Uniform Script -->
     <script src="<?=base_url()?>plugins/uniform/jquery.uniform.min.js"></script>
+    
+	<script>
+		function change(){
+			select = document.register.package_type.value;
+			if(select == "1") {
+				document.register.payment_method.style.display = "none";
+			}else{
+				document.register.payment_method.style.display = "";
+			}
+		}
+	</script>
 
 </body>
 
