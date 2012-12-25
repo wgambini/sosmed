@@ -4,7 +4,7 @@ class c_dashboard extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->user_authentication->validation('c_home', 'member');
+		$this->user_authentication->validation('c_home', 'user_id');
 	}
 
 	function index(){
