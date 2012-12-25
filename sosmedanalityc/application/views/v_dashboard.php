@@ -12,34 +12,34 @@
 <meta name="author" content="" />
 
 <!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>bootstrap/css/bootstrap.min.css" media="screen" />
 
 <!-- jquery-ui Stylesheets -->
-<link rel="stylesheet" href="assets/jui/css/jquery.ui.all.css" media="screen" />
-<link rel="stylesheet" href="assets/jui/jquery-ui.custom.css" media="screen" />
-<link rel="stylesheet" href="assets/jui/timepicker/jquery-ui-timepicker.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/jui/css/jquery.ui.all.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/jui/jquery-ui.custom.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/jui/timepicker/jquery-ui-timepicker.css" media="screen" />
 
 <!-- Uniform Stylesheet -->
-<link rel="stylesheet" href="plugins/uniform/css/uniform.default.css" />
+<link rel="stylesheet" href="<?=base_url()?>plugins/uniform/css/uniform.default.css" />
 
 <!-- Plugin Stylsheets first to ease overrides -->
 
 <!-- iButton -->
-<link rel="stylesheet" href="plugins/ibutton/jquery.ibutton.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>plugins/ibutton/jquery.ibutton.css" media="screen" />
 
 <!-- Circular Stat -->
-<link rel="stylesheet" href="custom-plugins/circular-stat/circular-stat.css" />
+<link rel="stylesheet" href="<?=base_url()?>custom-plugins/circular-stat/circular-stat.css" />
 
 <!-- Fullcalendar -->
-<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.css" media="screen" />
-<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print" />
+<link rel="stylesheet" href="<?=base_url()?>plugins/fullcalendar/fullcalendar.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>plugins/fullcalendar/fullcalendar.print.css" media="print" />
 
 <!-- End Plugin Stylesheets -->
 
 <!-- Main Layout Stylesheet -->
-<link rel="stylesheet" href="assets/css/fonts/icomoon/style.css" media="screen" />
-<link rel="stylesheet" href="assets/css/mooncake.min.css" media="screen" />
-<link rel="stylesheet" href="assets/css/plugins/plugins.min.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/css/fonts/icomoon/style.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/css/mooncake.min.css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/css/plugins/plugins.min.css" media="screen" />
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -61,7 +61,7 @@
 					<div class="brand-wrap pull-left">
 						<div class="brand-img">
 							<a class="brand" href="#">
-								<img src="assets/images/logo.png" alt="" />
+								<img src="<?=base_url()?>assets/images/logo.png" alt="" />
 							</a>
 						</div>
 					</div>
@@ -95,11 +95,11 @@
                         	<div id="user-info" class="clearfix">
                                 <span class="info">
                                 	Welcome
-                                    <span class="name">Shana-chan</span>
+                                    <span class="name"><?=$user_name?></span>
                                 </span>
                             	<div class="avatar">
                                 	<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                                    	<img src="assets/images/pp.jpg" alt="Avatar" />
+                                    	<img src="<?=base_url()?>assets/images/pp.jpg" alt="Avatar" />
                                     </a>
                                     <ul class="dropdown-menu pull-right">
                                     	<li><a href="profile.html"><i class="icol-user"></i> My Profile</a></li>
@@ -131,11 +131,16 @@
 											<span class="nav-title">General</span>
                                         </span>
                                     	<ul class="inner-nav">
-                                        	<li class="active"><a href="dashboard.html"><i class="icol-dashboard"></i> Dashboard</a></li>
-                                        	<li><a href="calendar.html"><i class="icol-calendar-2"></i> Calendar</a></li>
-                                            <li><a href="icons.html"><i class="icol-lifebuoy"></i> Icons</a></li>
-                                        	<li><a href="grids.html"><i class="icol-grid"></i> Grids</a></li>
-                                        	<li><a href="typography.html"><i class="icol-font"></i> Typography</a></li>
+                                        	<li class="active"><a href="#"><i class="icol-dashboard"></i>Reach</a></li>
+                                        	<li><a href="#"><i class="icol-calendar-2"></i> Engangement</a></li>
+                                            <li><a href="#"><i class="icol-lifebuoy"></i>Market Share</a></li>
+                                        	<li><a href="#"><i class="icol-grid"></i>Unique Users</a></li>
+                                        	<li><a href="#"><i class="icol-font"></i>Total Mention</a></li>
+											<li><a href="#"><i class="icol-calendar-2"></i> ReTweet</a></li>
+                                            <li><a href="#"><i class="icol-lifebuoy"></i>Time Based</a></li>
+                                        	<li><a href="#"><i class="icol-grid"></i>Trend Follower</a></li>
+                                        	<li><a href="#"><i class="icol-font"></i>By Location</a></li>
+											<li><a href="#"><i class="icol-font"></i>Demography</a></li>
                                         </ul>
                                     </li>
                                 	<li>
@@ -581,7 +586,7 @@
                                             <ul class="thumbnails">
                                                 <li class="me">
                                                     <div class="thumbnail">
-                                                        <img src="assets/images/pp.jpg" />
+                                                        <img src="<?=base_url()?>assets/images/pp.jpg" />
                                                     </div>
                                                     <div class="message">
                                                         <span class="name">Shana-chan</span>
@@ -591,7 +596,7 @@
                                                 </li>
                                                 <li class="others">
                                                     <div class="thumbnail">
-                                                        <img src="sample/p2.jpg" />
+                                                        <img src="<?=base_url()?>sample/p2.jpg" />
                                                     </div>
                                                     <div class="message">
                                                         <span class="name">Jane Well</span>
@@ -601,7 +606,7 @@
                                                 </li>
                                                 <li class="me">
                                                     <div class="thumbnail">
-                                                        <img src="assets/images/pp.jpg" />
+                                                        <img src="<?=base_url()?>assets/images/pp.jpg" />
                                                     </div>
                                                     <div class="message">
                                                         <span class="name">Shana-chan</span>
@@ -611,7 +616,7 @@
                                                 </li>
                                                 <li class="others">
                                                     <div class="thumbnail">
-                                                        <img src="sample/p1.jpg" />
+                                                        <img src="<?=base_url()?>sample/p1.jpg" />
                                                     </div>
                                                     <div class="message">
                                                         <span class="name">Jonathan Doe</span>
@@ -649,26 +654,26 @@
     </div>
 
     <!-- Core Scripts -->
-    <script src="assets/js/libs/jquery-1.8.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/libs/jquery.placeholder.min.js"></script>
-    <script src="assets/js/libs/jquery.mousewheel.min.js"></script>
+    <script src="<?=base_url()?>assets/js/libs/jquery-1.8.2.min.js"></script>
+    <script src="<?=base_url()?>bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?=base_url()?>assets/js/libs/jquery.placeholder.min.js"></script>
+    <script src="<?=base_url()?>assets/js/libs/jquery.mousewheel.min.js"></script>
     
     <!-- Template Script -->
-    <script src="assets/js/template.js"></script>
-    <script src="assets/js/setup.js"></script>
+    <script src="<?=base_url()?>assets/js/template.js"></script>
+    <script src="<?=base_url()?>assets/js/setup.js"></script>
 
     <!-- Customizer, remove if not needed -->
-    <script src="assets/js/customizer.js"></script>
+    <script src="<?=base_url()?>assets/js/customizer.js"></script>
 
     <!-- Uniform Script -->
-    <script src="plugins/uniform/jquery.uniform.min.js"></script>
+    <script src="<?=base_url()?>plugins/uniform/jquery.uniform.min.js"></script>
     
     <!-- jquery-ui Scripts -->
-    <script src="assets/jui/js/jquery-ui-1.8.24.min.js"></script>
-    <script src="assets/jui/jquery-ui.custom.min.js"></script>
-    <script src="assets/jui/timepicker/jquery-ui-timepicker.min.js"></script>
-    <script src="assets/jui/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?=base_url()?>assets/jui/js/jquery-ui-1.8.24.min.js"></script>
+    <script src="<?=base_url()?>assets/jui/jquery-ui.custom.min.js"></script>
+    <script src="<?=base_url()?>assets/jui/timepicker/jquery-ui-timepicker.min.js"></script>
+    <script src="<?=base_url()?>assets/jui/jquery.ui.touch-punch.min.js"></script>
     
     <!-- Plugin Scripts -->
     
@@ -676,30 +681,30 @@
     <!--[if lt IE 9]>
     <script src="assets/js/libs/excanvas.min.js"></script>
     <![endif]-->
-    <script src="plugins/flot/jquery.flot.min.js"></script>
-    <script src="plugins/flot/plugins/jquery.flot.tooltip.min.js"></script>
-    <script src="plugins/flot/plugins/jquery.flot.pie.min.js"></script>
-    <script src="plugins/flot/plugins/jquery.flot.resize.min.js"></script>
+    <script src="<?=base_url()?>plugins/flot/jquery.flot.min.js"></script>
+    <script src="<?=base_url()?>plugins/flot/plugins/jquery.flot.tooltip.min.js"></script>
+    <script src="<?=base_url()?>plugins/flot/plugins/jquery.flot.pie.min.js"></script>
+    <script src="<?=base_url()?>plugins/flot/plugins/jquery.flot.resize.min.js"></script>
 
     <!-- Circular Stat -->
-    <script src="custom-plugins/circular-stat/circular-stat.min.js"></script>
+    <script src="<?=base_url()?>custom-plugins/circular-stat/circular-stat.min.js"></script>
 
     <!-- SparkLine -->
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="<?=base_url()?>plugins/sparkline/jquery.sparkline.min.js"></script>
     
     <!-- iButton -->
-    <script src="plugins/ibutton/jquery.ibutton.js"></script>
+    <script src="<?=base_url()?>plugins/ibutton/jquery.ibutton.js"></script>
 
     <!-- Full Calendar -->
-    <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="<?=base_url()?>plugins/fullcalendar/fullcalendar.min.js"></script>
     
     <!-- DataTables -->
-    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="plugins/datatables/TableTools/js/TableTools.min.js"></script>
-    <script src="plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="<?=base_url()?>plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?=base_url()?>plugins/datatables/TableTools/js/TableTools.min.js"></script>
+    <script src="<?=base_url()?>plugins/datatables/dataTables.bootstrap.js"></script>
     
     <!-- Demo Scripts -->
-    <script src="assets/js/demo/dashboard.js"></script>
+    <script src="<?=base_url()?>assets/js/demo/dashboard.js"></script>
 
 </body>
 

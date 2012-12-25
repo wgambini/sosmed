@@ -6,7 +6,7 @@ class c_login extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->user_authentication->logged_in('c_dashboard', 'member');
+		$this->user_authentication->logged_in('c_dashboard', 'user_id');
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 		$this->init();
@@ -41,10 +41,8 @@ class c_login extends CI_Controller{
 			$this->load->model('m_user');
 			$user = $this->m_user->get_user($user_name,$user_password);
 			if($user->num_rows()>0){
-				$member = $user->row();
-				$data['member'] = $member->user_id;
-				$data['package_type'] = $member->package_type;
-				$this->session->set_userdata($data);
+				$member = $user->result_array();
+				$this->session->set_userdata($member[0]);
 				redirect('c_dashboard');
 			}else{
 				show_error("Username atau password salah");
