@@ -4,7 +4,7 @@ class c_dashboard extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->user_authentication->validation('c_login', 'member');
+		$this->user_authentication->validation('c_home', 'member');
 	}
 
 	function index(){
@@ -17,7 +17,7 @@ class c_dashboard extends CI_Controller{
 	
 	function do_signout(){
 		$this->session->sess_destroy();
-		redirect('c_login');
+		redirect('c_home');
 	}
 }
 ?>
