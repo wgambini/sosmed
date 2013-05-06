@@ -16,7 +16,7 @@
 */
 
 $config['ssl_enable'] = TRUE;
-$config['base_url']	= 'https://127.0.0.1/sosmedanalityc/';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

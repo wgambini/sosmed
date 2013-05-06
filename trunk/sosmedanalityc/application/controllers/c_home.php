@@ -9,7 +9,7 @@ class c_home extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('v_homepage');
+		$this->load->view('homepage/main');
 	}
 	
 	function get_request(){
