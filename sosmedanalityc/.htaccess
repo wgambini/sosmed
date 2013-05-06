@@ -9,3 +9,4 @@ RewriteCond $1 !^(index\.php|js)
 RewriteCond $1 !^(index\.php|plugins)
 RewriteCond $1 !^(index\.php|sample)
 RewriteRule ^(.*)$ /sosmedanalityc/index.php/$1 [L]
+
